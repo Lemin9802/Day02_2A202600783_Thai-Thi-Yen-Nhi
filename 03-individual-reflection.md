@@ -4,25 +4,25 @@
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng |
 |---|---|---|
-| Scan cá nhân | Lên danh sách 5 problems sát thực tế (bao gồm cả tối ưu quy trình code React/.NET và tối ưu lịch trình cá nhân). | Mang lăng kính đa dạng (từ kỹ thuật đến đời sống) vào nhóm. |
-| Pitch Problem Card | Trình bày bài toán "Kế hoạch di chuyển HCM-HN tìm combo chỗ ở, gym, ăn". | Bài toán có tính thực tế và pain point cao nên đã được nhóm đồng thuận chọn làm Candidate chính để phát triển. |
-| Validation / research | Chỉ ra khó khăn trong việc thu thập dữ liệu phi cấu trúc từ bài đăng Facebook, video TikTok. | Giúp nhóm xác định rõ AI Intervention Point nằm ở khâu "bóc tách thông tin". |
-| Problem Statement | Đề xuất việc thiết lập ranh giới (Boundary) rõ ràng: Agent chỉ xếp hạng và cảnh báo rủi ro, không tự quyết định thuê. | Giới hạn được rủi ro lừa đảo (scam) vốn rất phổ biến trên MXH. |
-| Rule / Workflow / Agent | Cùng nhóm phân tích và quyết định nâng lên mức Agent. | Xác định được các Tools cụ thể Agent cần gọi (Map/Route tool, Parser, Risk checker). |
+| Scan cá nhân | Lên danh sách 5 problems sát thực tế (bao gồm tối ưu quy trình code React/.NET và tối ưu lịch trình cá nhân). | Mang lăng kính đa dạng vào buổi thảo luận nhóm. |
+| Pitch Problem Card | Trình bày bài toán "Kế hoạch di chuyển HCM-HN tìm combo chỗ ở, gym, ăn". | Ý tưởng gốc của tôi bị nhóm từ chối vì scope quá rộng, nhưng nhóm đã dùng nó làm nền tảng để tinh chỉnh thành bài toán chốt: "Agent tìm phòng trọ tối ưu". |
+| Validation / research | Chia sẻ rủi ro về độ phức tạp khi thu thập dữ liệu phi cấu trúc từ Facebook/TikTok. | Giúp nhóm đánh giá đúng độ khó của đầu vào, từ đó quyết định loại bỏ phần tìm "combo ăn/gym" để thu hẹp scope. |
+| Problem Statement | Hỗ trợ định hình lại workflow và xây dựng các success metrics (thời gian, số lượng tin). | Đảm bảo giữ được linh hồn của bài toán gốc là giảm thời gian từ 3-4 giờ lướt web xuống còn 30-45 phút. |
+| Rule / Workflow / Agent | Phân tích sự cần thiết của Agent khi cần kết hợp Map API và Risk Checker. | Cùng nhóm thống nhất chọn Agent làm hướng đi cuối cùng thay vì Workflow tuyến tính. |
 
 ## 2. Bảng dùng AI trong reflection
 
 | Phase | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai/hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| Scan & Problem Card | Nhờ AI đóng vai "Skeptical PM" để phản biện điểm yếu của ý tưởng tìm trọ. | Chỉ ra rằng bước "cào" data từ FB/TikTok tự động là rất khó và lý tưởng hóa. | Đánh giá thấp giá trị của việc tiết kiệm chi phí so với thuê trên app. | Chỉnh lại luồng: Đưa phần gom text về Rule/Script hoặc user tự paste thay vì bắt AI tự động 100%. |
-| Workflow | Dùng AI để chuyển luồng tư duy thành bản vẽ sơ đồ dạng Text/ASCII. | Căn chỉnh các bước vuông vức, thấy rõ điểm nghẽn (Bottleneck). | Có xu hướng gộp bước "Review" và "Liên hệ" làm một. | Tách rõ Human Boundary ở khâu liên hệ chủ nhà để chốt rủi ro. |
-| Decision | Đối chiếu Rule vs Workflow vs Agent. | Gợi ý được các Tool mà Agent có thể gọi (Maps API). | Đề xuất Agent ôm đồm cả việc lên lịch hẹn tự động. | Cắt bỏ tính năng tự hẹn lịch, chỉ giữ Agent ở mức tạo Shortlist và cảnh báo rủi ro. |
+| Scan & Problem Card | Nhờ AI đóng vai "Skeptical PM" để phản biện điểm yếu của ý tưởng cá nhân. | AI chỉ ra cực kỳ chính xác rằng việc tự động cào data từ FB/TikTok là điểm yếu chí mạng. Nhờ đó, tôi không bị bất ngờ khi nhóm từ chối bài của mình với lý do tương tự. | Đánh giá thấp giá trị của việc tiết kiệm chi phí so với thuê trên app đặt phòng. | Tôi vui vẻ đồng ý với nhóm: Cắt bỏ các yêu cầu phụ (gym, ăn) để tập trung giải quyết triệt để phần tìm phòng trọ. |
+| Workflow | Dùng AI để chuyển luồng tư duy thành bản vẽ ASCII. | Căn chỉnh các bước vuông vức, thấy rõ điểm nghẽn (Bottleneck). | AI thường có xu hướng gộp bước "Review" và "Liên hệ" của người dùng. | Tách rõ Human Boundary ở khâu liên hệ chủ nhà để chốt rủi ro. |
+| Decision | Đối chiếu Rule vs Workflow vs Agent. | Gợi ý được các Tool mà Agent có thể gọi (như Maps API để tính commute score). | AI (khi đóng vai Agent) hay ảo tưởng sức mạnh ôm cả việc chốt cọc thay người dùng. | Cùng nhóm thiết lập Boundary chặt chẽ: Agent chỉ chấm điểm, người dùng tự xác minh. |
 
 ## 3. Reflection câu hỏi mở
 
-*   **Điều tôi học được từ bài toán của nhóm:** Ban đầu, tôi định hình bài toán của mình ở mức Workflow. Tuy nhiên, khi vào nhóm và mổ xẻ kỹ khâu tính toán di chuyển (phải dùng Google Routes API) kết hợp với đánh giá rủi ro (Risk checker), tôi nhận ra đây chính là đất diễn tuyệt vời cho Agent. Dữ liệu phi cấu trúc (teencode, viết tắt) trên MXH là nơi Rule thông thường hoàn toàn "bó tay", khẳng định rõ ràng AI Value.
-*   **Điều tôi đóng góp cốt lõi:** Đưa ra bài toán gốc có impact đo lường được bằng thời gian cụ thể (từ 3-4 giờ lướt web xuống còn 30-45 phút).
-*   **Nếu làm lại, tôi sẽ thay đổi điều gì:** Tôi sẽ challenge nhóm mạnh hơn ở phần "Agent Tools" — cụ thể là thu hẹp nguồn dữ liệu đầu vào. Việc bắt Agent tự động thu thập từ quá nhiều nguồn (cả web, FB, TikTok) có thể khiến MVP thất bại vì rác dữ liệu. Đáng lẽ nên chốt scope nhỏ hơn: "Người dùng copy paste link/text bài đăng vào để Agent phân tích" sẽ khả thi hơn trong thực tế vận hành.
+*   **Điều tôi học được từ bài toán của nhóm:** Bài toán cá nhân của tôi ban đầu định hình ở mức Workflow. Tuy nhiên, khi ghép vào nhóm và nhận feedback (cả từ AI Skeptical PM lẫn đồng đội), tôi nhận ra việc thu thập data MXH là quá sức cho Workflow thông thường. Nhóm đã tinh chỉnh thành Agent kết hợp gọi Maps API và chấm điểm rủi ro. Đây là bài học lớn về sự "thỏa hiệp" để có một Problem Statement khả thi và sắc bén hơn.
+*   **Điều tôi đóng góp cốt lõi:** Dù ý tưởng gốc (tìm combo nhà + gym + ăn) phải thu hẹp lại, nhưng tôi đã cung cấp được bối cảnh (context) đau đớn thực tế và metric đo lường thời gian (từ 3-4 giờ xuống 30-45 phút) để nhóm xây dựng thành công Problem Statement cuối cùng.
+*   **Nếu làm lại, tôi sẽ thay đổi điều gì:** Tôi sẽ challenge nhóm kỹ hơn ở khâu thiết kế **"Search/listing collector tool"** của Agent. Nhóm đang kỳ vọng Agent tự đi gom tin đăng từ FB/TikTok, nhưng rủi ro rác dữ liệu vẫn rất cao. Đáng lẽ nên chốt scope nhỏ hơn: *"Người dùng copy link/text paste vào để Agent phân tích"* thì sẽ an toàn và dễ validate hơn trong MVP.
 
 ## 4. Tự kiểm cuối bài
 
